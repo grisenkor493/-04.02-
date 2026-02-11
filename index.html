@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Первая страница</title>
-    <meta name="description" content="краткое описание страницы">
-    <meta name="keywords" content="html, код, структура">
-    
-    <!-- ⭐ Привязка к файлу стилей style.css -->
+    <title>Семантическая вёрстка с CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Тут начало шапки -->
-    <header>Тут будет шапка</header>
-
-    <!-- Начало меню -->
-    <nav>Тут будет меню</nav>
-
-    <!-- Основной контент -->
-    <main>
-        <section>
-            <article>Тут будет новость</article>
-            <article>И еще она</article>
-        </section>
-    </main>
-
-    <!-- Боковая панель -->
-    <aside>
-        <div>какой-то контент</div>
-    </aside>
-
-    <!-- Футер сайта -->
-    <footer>Футер сайта</footer>
+    <div class="container">
+        <header>
+            <h1>Заголовок страницы</h1>
+        </header>
+        <nav>
+            <h2>Меню</h2>
+            <ul>
+                <li><a href="#">Выбор 1</a></li>
+                <li><a href="#">Выбор 2</a></li>
+                <li><a href="#">Выбор 3</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Статья</h2>
+            <p>Здесь может быть текст статьи:
+                <img src="1.jpg" alt="Пример изображения">
+            </p>
+        </article>
+        <footer>
+            Это "подвал" страницы
+        </footer>
+    </div>
 </body>
 </html>

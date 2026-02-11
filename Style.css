@@ -1,0 +1,67 @@
+/* ЗАДАНИЕ 2: Оформление ВСЕХ абзацев текста */
+/* Эти стили должны быть у ВСЕХ абзацев без исключения */
+p {
+    color: red;                   /* Цвет шрифта — красный */
+    background-color: lightblue;  /* Цвет фона — голубой */
+    border: 3px solid black;      /* Рамка — черная, толщиной 3 px */
+    padding: 10px;                /* Расстояние от текста до границы — 10 px со всех сторон */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    min-height: 80px;             /* Чтобы блоки были одинаковой высоты */
+    box-sizing: border-box;       /* Чтобы padding учитывался в размерах */
+}
+
+/* ЗАДАНИЕ 3: Один абзац с другим стилем через ID */
+/* Добавляем ДОПОЛНИТЕЛЬНЫЕ стили, не переопределяя основные */
+#unique-paragraph {
+    /* Основные стили НЕ трогаем - они наследуются от p {} */
+    
+    /* Добавляем уникальные стили: */
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    border-radius: 10px;          /* Закругленные углы */
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3); /* Тень */
+}
+
+/* ЗАДАНИЕ 4: Два абзаца с другим стилем через CLASS */
+/* Добавляем ДОПОЛНИТЕЛЬНЫЕ стили, не переопределяя основные */
+.common-paragraph {
+    /* Основные стили НЕ трогаем - они наследуются от p {} */
+    
+    /* Добавляем общие стили для двух абзацев: */
+    font-family: 'Courier New', monospace;
+    text-align: right;
+    border-left: 5px solid darkblue; /* Дополнительная рамка слева */
+    border-right: 5px solid darkblue; /* Дополнительная рамка справа */
+    background-color: #add8e6;     /* Тот же голубой, но чуть темнее для отличия */
+}
+
+/* ЗАДАНИЕ 5: Расположение блоков по два в ряд */
+body {
+    margin: 20px;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.block {
+    width: 50%;                   /* Каждый блок занимает 50% ширины */
+    float: left;                  /* Используем float для обтекания */
+    box-sizing: border-box;       /* Учитываем padding и border в ширине */
+    padding: 10px;                /* Отступ между блоками */
+}
+
+/* Третий блок должен быть ниже */
+.block:nth-child(3) {
+    clear: both;                  /* Очищаем обтекание - блок будет ниже */
+    width: 100%;                  /* Занимает всю ширину */
+}
+
+/* Делаем родительские блоки видимыми для наглядности */
+.block {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

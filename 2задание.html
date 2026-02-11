@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название сайта (организации)</title>
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-coloShorthand r: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* Шапка сайта */
+        header {
+            background-color: #5c7aff;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header h2 {
+            font-size: 1.3em;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+        
+        /* Основное содержимое */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        /* Основная статья */
+        article {
+            flex: 3;
+            padding: 20px;
+            min-width: 300px;
+        }
+        
+        article h3 {
+            color: #6186ff;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        article p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        article hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 30px 0;
+        }
+        
+        /* Боковая панель (меню и общая информация) */
+        aside {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 1px solid #e0e0e0;
+        }
+        
+        /* Навигационное меню */
+        nav {
+            margin-bottom: 40px;
+        }
+        
+        nav h3 {
+            color: #0077a7;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        nav ul {
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 3px solid #6696ff;
+        }
+        
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        nav ul li a:hover {
+            color: #e16bff;
+        }
+        
+        /* Общая информация */
+        .info-section {
+            margin-top: 30px;
+        }
+        
+        .info-section h3 {
+            color: #c765ff;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .info-section p {
+            background-color: #d09dff;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #b76aff;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #815aa5;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            
+            aside {
+                border-left: none;
+                border-top: 1px solid #e0e0e0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header>
+            <h1>Название сайта (организации)</h1>
+            <h2>Описание сайта</h2>
+        </header>
+        
+        <!-- Основное содержимое -->
+        <main>
+            <!-- Основная статья -->
+            <article>
+                <h3>Страница</h3>
+                <p>Здравствуйте уважаемые будущие веб-мастера! Мне 55 лет и я рад приветствовать Вас на своём сайте. Этот сайт первый, который я разработал самостоятельно, а до этого умел только входить в интернет.</p>
+                <p>Почему я решил его сделать? За те 3 месяца, пока разбирался в саитостроении и создавал этот ресурс обнаружилось, что авторы руководств по созданию сайтов считают многие нюансы само собой разумеющимися и не обращают на них внимание А мне, учитывая возраст и «опыт», было не просто понять как раз эти нюансы, они отнимали больше всего времени.</p>
+                <hr>
+            </article>
+            
+            <!-- Боковая панель -->
+            <aside>
+                <!-- Навигация -->
+                <nav>
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="#">Страница 1</a></li>
+                        <li><a href="#">Страница 2</a></li>
+                    </ul>
+                </nav>
+                
+                <hr>
+                
+                <!-- Общая информация -->
+                <section class="info-section">
+                    <h3>Общая информация</h3>
+                    <p>Текст общей информации или реклама</p>
+                </section>
+            </aside>
+        </main>
+        
+        <!-- Подвал сайта -->
+        <footer>
+            <p>© 2026 Название сайта (организации). Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
