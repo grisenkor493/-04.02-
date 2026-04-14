@@ -1,86 +1,260 @@
-/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.wrapper {
+    width: 980px; /* исправлено по всем примерам в документе */
+    margin: 0 auto;
+}
+
+/* TOP NAVIGATION */
+.bound-top-navigation {
+    background: #f2f2f2;
+}
+#top-navigation {
+    height: 14px;
+    background: #f2f2f2;
+    padding: 7px 0;
+    font-size: 12px;
+    color: #060606;
+}
+#block-date {
+    float: left;
+}
+#block-nav-menu {
+    float: right;
+}
+#block-nav-menu ul {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+#block-nav-menu ul li{
+float: left;
+list-style: none;
+padding: 0 7px;
+border-right: solid 1px #060606; /*создаем границу справа*/
+}
+#block-nav-menu li:last-child{
+border-right: none; /*Убираем границу справа у последнего элемента*/
 }
 
-/* Шапка */
-header {
-    background-color: #707070;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 20px;
+/* ЛОГОТИП — маленький и слева */
+#logo {
+    float: left;               /* старый надёжный способ */
+    margin-right: 30px;        /* отступ справа от логотипа */
 }
 
-/* Навигация */
-nav {
-    background-color: #ffd900;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.wrapper.logo-main-menu {
+    display: flex;             /* современный flexbox */
+    align-items: center;       /* выравнивание по центру по вертикали */
+    justify-content: flex-start; /* прижимаем всё к левому краю */
 }
 
-nav h2 {
-    color: white;
-    margin-left: 10px;
+#block-nav-menu ul li {
+    float: left;
+    list-style: none;
+    padding: 0 7px;
+    background: url("3stEKUJN.jpeg") right 3px no-repeat;
 }
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
+#block-nav-menu li:last-child {
+    background: none;
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul a {
-    color: white;
+#block-nav-menu li a {
     text-decoration: none;
-    padding: 5px 10px;
-    background-color: #ffbe32d3;
-    border-radius: 3px;
+    color: #060606;
+}
+#block-nav-menu li a:hover {
+    text-decoration: underline;
 }
 
-nav ul a:hover {
-    background-color: #ffd000;
+/* LOGO AND MAIN MENU */
+.logo-main-menu {
+    width: 980px;
+    padding-top: 19px;
+    height: 83px;
+    background: #fff;
+}
+#logo {
+    margin-left: 30px;
+    width: 205px;
+    background: #92b800;
+    float: left;
+}
+#main-menu {
+    float: right;
+    height: 83px;
+}
+#main-menu ul {
+    margin-top: 18px;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 0;
+}
+#main-menu ul li {
+    float: left;
+    list-style: none;
+    background: #f2f2f2;
+    padding: 24px 32px 21px 32px;
+    margin-right: 1px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#main-menu ul li:hover,
+#main-menu ul li.active-element {
+    background: #92b800;
+    color: #fff;
 }
 
-/* Статья */
-article {
-    padding: 20px;
-    background-color: #848569;
-    border-radius: 5px;
-    margin-bottom: 20px;
+/* ADVERTISEMENT AND CONTENT */
+.bound-advertisement-content {
+    background: #f2f2f2;
+}
+#advertisement {
+    width: 980px;
+    height: 335px;
+}
+#content {
+    height: 400px;
+    background: aquamarine;
+    clear: both;
 }
 
-article img {
-    height: 50px;
-    border: 2px solid #ad8c61;
-    border-radius: 4px;
-    display: block;
-    margin-top: 10px;
+/*NEWS*/
+#block-news {
+width: auto;
+height: auto;
+float: left; /*делаем блок плавающим и прижимаем влево, следующий ПЛАВУЮЩИЙ
+блок прижмется к нему*/
+}
+#block-news .news {
+overflow: hidden;
+margin-top: auto;
+margin-bottom: auto;
+}
+margin-top: 15px;
+#block-news .news-image {
+float: left;
+width: auto;
+height: auto;
+margin-right: auto;
+}
+#block-news .news-info {
+float: left;
+width: 175px;
+height: 130px;
+}
+#block-news .news-date {
+font-size: 14px;
+color: #000700;
+margin-top: 0px;
+}
+#block-news .news-content {<!--Создаем поле ввода, value указывает текст внутри поля
+ввода по умолчанию-->
+font-size: 14px;
+color: #84807d;
+margin-top: 0px;
+
 }
 
-/* Подвал */
-footer {
-    background-color: #ffb45e;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    border-radius: 5px;
+.button {
+padding: 10px 25px 16px 28px; /*Добавляем отступы – выравниваем текст внутри
+кнопки*/
+width: 74px;
+height: 16px;
+float: right; /*Смещаем кнопку вправо*/
+font-weight: bold;
+font-size: 14px;
+background: url("images/bg-button.png") 0 0 no-repeat; /*Устанавливаем изобра-
+жение кнопки фоном*/
+}
+
+/* OFFERS */
+#block-offers {
+    width: 600px;
+    height: 400px;
+    float: left;
+}
+.button {
+    padding: 8px 25px 16px 28px;
+    height: 17px;
+    float: right;
+    font-weight: bold;
+    font-size: 14px;
+    background: url("images/bg-button-gradient.png") 0 0 repeat-x;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 3px 5px #A29F9F;
+    -moz-box-shadow: 0px 3px 5px #A29F9F;
+    box-shadow: 0 3px 5px #A29F9F;
+}
+
+/* FOOTER */
+.bound-footer {
+    background: #e6e6e6;
+}
+#footer {
+    height: 296px;
+}
+#block-subscription {
+    width: 320px;
+    height: 296px;
+    background: #f25f68;
+    float: left;
+}
+#block-why-us {
+    width: 200px;
+    height: 296px;
+    background: #f2c332;
+    float: left;
+}
+#block-follow-us {
+    width: 200px;
+    height: 296px;
+    background: #94f2e5;
+    float: left;
+}
+#block-address {
+    width: 200px;
+    height: 296px;
+    background: #f28a22;
+    float: left;
+}
+.bound-below-footer {
+    height: 110px;
+    background: #454545;
+}
+
+#block-subscription .form-input-text {
+background: none;
+padding: 7px 10px;
+width: 251px;
+font-size: 12px;
+font-family: Arial,Helvetica,sans-serif;
+color: #c0c0c0;
+28
+}
+
+/*height: 14px;*/
+border: none;
+margin: 0;
+#block-subscription .subscribe-button {
+margin-top: 10px;
+margin-bottom: 10px;
+float: left;
+}
+
+#block-subscription .bg-input {
+background: url("images/bg-newsletter-input.png") 0 0 no-repeat;
+}
+
+#block-subscription .subscription-form {
+overflow: hidden;
+}
+
+#newsletter, 
+.newslettr {
+    clear: both !important;
+    margin-top: 60px;
+    width: 100%;
+    float: none;
 }
